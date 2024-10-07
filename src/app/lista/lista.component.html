@@ -1,0 +1,29 @@
+<p>lista works!</p>
+<div class="container">
+    <h1>Lista de Compras</h1>
+    
+    
+    <div class="form-add">
+      <input 
+        type="text" 
+        [(ngModel)]="novoItem" 
+        placeholder="Adicionar novo item" 
+        class="input-item" 
+      />
+      <button (click)="adicionarItem(novoItem)">Adicionar</button>
+    </div>
+    
+    
+    <ul>
+      <li *ngFor="let item of listaCompras; let i = index">
+        <span [ngClass]="{ 'comprado': item.comprado }">{{ item.nome }}</span>
+        <input 
+          type="checkbox" 
+          [checked]="item.comprado" 
+          (change)="marcarComoComprado(item)" 
+        />
+        <button (click)="removerItem(i)">Remover</button>
+      </li>
+    </ul>
+  </div>
+  

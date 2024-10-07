@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #6a0dad, #b28df2); 
+    padding: 0;
+    margin: 0;
+    height: 100vh; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.container {
+    max-width: 600px; 
+    width: 100%; 
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); 
+}
+
+h1 {
+    color: #6a0dad; 
+}
+
+.form-add {
+    margin-bottom: 20px;
+    display: flex; 
+}
+
+input[type="text"] {
+    width: calc(100% - 100px); 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px;
+    background-color: #6a0dad; 
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s; 
+}
+
+button:hover {
+    background-color: #4b0082; 
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+
+.comprado {
+    text-decoration: line-through; 
+    color: lightgray; 
+}
+
+
+li input[type="checkbox"]:not(:checked) + span {
+    text-decoration: none; 
+    color: black; 
+}
