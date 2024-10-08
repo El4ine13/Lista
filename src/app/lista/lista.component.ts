@@ -10,15 +10,16 @@ import { CommonModule } from '@angular/common';
   imports: [FormsModule, CommonModule]
 })
 export class ListaComponent {
-  novoItem: string = '';
   listaCompras: { nome: string, comprado: boolean }[] = [
     { nome: 'Maçã', comprado: false },
     { nome: 'Arroz', comprado: false },
     { nome: 'Leite', comprado: true },
   ];
 
+  novoItem: string = ''; 
+
   marcarComoComprado(item: { nome: string, comprado: boolean }) {
-    item.comprado = !item.comprado;
+    item.comprado = !item.comprado; 
   }
 
   adicionarItem(nome: string) {
